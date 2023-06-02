@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <main>
         <div class="characters-container">
             <div class="dice-container">
                 <div class="dice">
@@ -23,8 +24,12 @@
                 </div>
         
                 <button class="roll third-dice">
-                    Character 1
+                    Roll a Hero
                 </button>
+                <button class="refresh-button one">
+                    Refresh
+                </button>
+                <div class="character-two-name"></div>
             </div>
     
             <div class="dice-container">
@@ -38,62 +43,60 @@
                 </div>
         
                 <button class="roll third-dice">
-                    Character 2
+                    Roll the partner
                 </button>
+                <button class="refresh-button two">
+                    Refresh
+                </button>
+                <div class="character-two-name"></div>
             </div>
         </div>
+        
+        
+        <div class="action-container">
+            <div class="dice-container">
+                <div class="dice">
+                    <div class="face front movie"></div>
+                    <div class="face back movie"></div>
+                    <div class="face top movie"></div>
+                    <div class="face bottom movie"></div>
+                    <div class="face right movie"></div>
+                    <div class="face left movie"></div>
+                </div>
 
-        <div class="other-dice-container">
-            <div class="dice-container">
-                <div class="dice">
-                    <div class="face front scenario"></div>
-                    <div class="face back scenario"></div>
-                    <div class="face top scenario"></div>
-                    <div class="face bottom scenario"></div>
-                    <div class="face right scenario"></div>
-                    <div class="face left scenario"></div>
-                </div>
-        
                 <button class="roll second-dice">
-                    Scenario
+                    Roll a Movie
+                </button>
+                <button class="refresh-button movie-refresh">
+                    Refresh
                 </button>
             </div>
-        
+
             <div class="dice-container">
                 <div class="dice">
-                    <div class="face front object"></div>
-                    <div class="face back object"></div>
-                    <div class="face top object"></div>
-                    <div class="face bottom object"></div>
-                    <div class="face right object"></div>
-                    <div class="face left object"></div>
-                </div>
-        
-                <button class="roll third-dice">
-                    Object
-                </button>
-            </div>
-        
-            <div class="dice-container">
-                <div class="dice">
-                    <div class="face front"></div>
-                    <div class="face back"></div>
-                    <div class="face top"></div>
-                    <div class="face bottom"></div>
-                    <div class="face right"></div>
-                    <div class="face left"></div>
+                    <div class="face front mission"></div>
+                    <div class="face back mission"></div>
+                    <div class="face top mission"></div>
+                    <div class="face bottom mission"></div>
+                    <div class="face right mission"></div>
+                    <div class="face left mission"></div>
                 </div>
         
                 <button class="roll">
-                    Mission
+                   Get a Mission
+                </button>
+                <button class="refresh-button mission-refresh">
+                    Refresh
                 </button>
             </div>
-        </div>        
-    
+        </div>
+          
+    </main>
 
     <!-- JS File -->
-    <script src="js/roll-dice.js" type="text/javascript"></script>
-    <script src="js/api.js" type="text/javascript"></script>
+    <script src="js/roll-dice.js" type="module"></script>
+    <!-- <script src="missions.js" type="module"></script> -->
+    <!-- <script src="js/api.js" type="text/javascript"></script> -->
 
 </body>
 

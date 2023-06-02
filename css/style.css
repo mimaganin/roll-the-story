@@ -11,8 +11,11 @@
 }
 
 body {
+    background: #b33951;
+}
+
+main {
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -28,7 +31,7 @@ body {
     gap: 20px;
 }
 
-.other-dice-container {
+.action-container {
     display: flex;
     gap: 20px;
 }
@@ -91,9 +94,18 @@ body {
     height: inherit;
 }
 
-.scenario {
+.face.character > span {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    font: 700 18px 'Montserrat';
+    color: white;
+    background-color: black;
+}
+
+.movie {
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 70%;
     background-position: center;
 }
 
@@ -101,6 +113,19 @@ body {
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;
+}
+
+.mission > span {
+    display: inline-block;
+    position: absolute;
+    font: 700 18px 'Montserrat';
+    background-color: #b33951;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%)
 }
 
 .front {
@@ -127,11 +152,13 @@ body {
     transform: rotateY(-90deg) translateZ(100px);
 }
 
+
+
 /*
     Roll Button styles
 */
 
-.roll {
+button {
     cursor: pointer;
     color: #b33951;
     margin-top: 60px;
@@ -142,9 +169,15 @@ body {
     transition: .4s;
 }
 
-.roll:hover {
+button:hover {
     color: #fff;
     background: #b33951;
+}
+.refresh-button {
+    margin-top: 20px;
+    font-size: 13px;
+    padding: 6px 12px;
+    border: 1px solid #b33951;   
 }
 
 @media only screen and (max-width: 480px) { 
