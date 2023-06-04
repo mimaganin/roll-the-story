@@ -291,7 +291,6 @@ button:hover {
     font-size: 15px;
 }
 
-
 /*
     Mobile and tablet views
 */
@@ -329,7 +328,6 @@ button:hover {
 
     .mobile {
         display: flex;
-        justify-content: center;
     }
 
     .characters-container, .action-container {
@@ -393,5 +391,15 @@ button:hover {
     
     #newMissionInput {
         width: 100%;
+    }
+
+    .go-top-btn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 12px;
+        color: #FFFAFA;
+        text-decoration: none;
+        padding-right: 35px;
     }
 }
