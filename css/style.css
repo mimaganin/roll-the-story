@@ -2,6 +2,10 @@
     General Styles
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,29 +15,105 @@
 }
 
 body {
-    background: #b33951;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    font: 700 20px 'Montserrat';
+}
+
+body::before {
+    content: "";
+    background: url(../images/universe.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: rotate(180deg);
+    filter: blur(0.5px);
+    overflow-x: hidden;
 }
 
 main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 20px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background: #b33951;
+    overflow-x: hidden;
 }
 
-.characters-container {
+h2 {
+    font: 700 35px 'Montserrat';
+    color: #FFFAFA;
+    margin-top: 40px;
+}
+
+.mobile {
+    display: none;
+}
+
+.game-instructions-container.mobile {
+    display: none;
+}
+
+.game-instructions-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    width: 30%;
+    margin-left: 5%;
 }
 
-.action-container {
+.game-instructions {
+    font: 400 14px 'Montserrat';
+    color: #FFFAFA;
+    padding: 10px;
+    width: 100%;
+}
+
+.game-instructions p { 
+   margin-top: 15px;
+}
+
+.game-instructions span { 
+    font: 800 14px 'Montserrat';
+}
+
+.game-instructions-container.add-mission {
+    justify-content: flex-start;
+}
+
+.mission-input {
     display: flex;
+    flex-direction: column;
+}
+
+#newMissionInput {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    vertical-align: middle;
+}
+
+.characters-container, .action-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
     gap: 20px;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .dice-container {
@@ -41,9 +121,15 @@ main {
     flex-direction: column;
     place-items: center;
     width: 300px;
-    padding: 60px 0 40px;
+    padding: 40px 0 10px;
     border-radius: 30px;
-    background: #eeeeee;
+    background: linear-gradient(
+    0deg,
+    rgba(137, 148, 184, 0.61) 0%,
+    rgba(245, 246, 249, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+    );
+    background-blend-mode: normal;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
 }
 
@@ -107,11 +193,12 @@ main {
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
+    background-color: rgba(228, 228, 240, .9);
 }
 
 .character {
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 100%;
     background-position: center;
 }
 
@@ -119,13 +206,17 @@ main {
     display: inline-block;
     position: absolute;
     font: 700 18px 'Montserrat';
-    background-color: #b33951;
-    color: white;
+    color: #191970;
     text-align: center;
     border-radius: 3px;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%)
+}
+
+#errorMessage {
+    color: #dc143c;
+    font-weight: 700;
 }
 
 .front {
@@ -152,45 +243,155 @@ main {
     transform: rotateY(-90deg) translateZ(100px);
 }
 
-
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    background-color: #181818 ;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    word-spacing: 0px;
+    letter-spacing: 1px;
+}
 
 /*
-    Roll Button styles
+    Button styles
 */
 
 button {
     cursor: pointer;
-    color: #b33951;
+    color: #191970;
     margin-top: 60px;
     padding: 6px 12px;
     border-radius: 3px;
     font: 700 20px 'Montserrat';
-    border: 2px solid #b33951;
+    border: 2px solid #191970;
     transition: .4s;
 }
 
 button:hover {
-    color: #fff;
-    background: #b33951;
+    color: #FFFAFA;
+    background: #191970;
 }
 .refresh-button {
     margin-top: 20px;
     font-size: 13px;
     padding: 6px 12px;
-    border: 1px solid #b33951;   
+    border: 1px solid #191970;   
 }
 
-@media only screen and (max-width: 480px) { 
-    body {
-        flex-direction: row;
+#addMissionButtonDesktop {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 15px;
+}
+
+
+/*
+    Mobile and tablet views
+*/
+@media only screen and (max-width: 768px) { 
+
+    body::before{
+        filter: blur(0px);
     }
 
-    .adinkras-container {
+    h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .how-to-play-btn {
+        cursor: pointer;
+        color: #FFFAFA;
+        margin-top: 10px;
+        padding: 6px 12px;
+        border-radius: 3px;
+        font: 700 13px 'Montserrat';
+        border: 2px solid #FFFAFA;
+        transition: .4s;
+        text-decoration: none;
+    }
+
+    .game-instructions-container.mobile {
+        display: flex;
+        width: 100%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .characters-container, .action-container {
         flex-direction: column;
-        margin-top: 50px;
+        margin-left: 0%;
+        margin-bottom: 0;
+    }
+
+    .dice {
+        width: 150px;
+        height: 150px; 
+    }
+
+    .dice-container {
+        width: 250px;
+    }
+
+    .front {
+        transform: translateZ(73px);
     }
     
-    .other-dice-container {
-       flex-direction: column;
+    .back {
+        transform: rotateX(180deg) translateZ(73px);
+    }
+    
+    .top {
+        transform: rotateX(90deg) translateZ(73px);
+    }
+    
+    .bottom {
+        transform: rotateX(-90deg) translateZ(73px);
+    }
+    
+    .right {
+        transform: rotateY(90deg) translateZ(73px);
+    }
+    
+    .left {
+        transform: rotateY(-90deg) translateZ(73px);
+    }
+
+    .mission > span {
+        font: 700 13px 'Montserrat';
     } 
+
+    .game-instructions-container {
+        margin-left: 0;
+        padding: 10px
+    }
+
+    .game-instructions-container.add-mission {
+        width: 100%;
+        justify-content: center;
+        margin: 8px;
+        padding: 10px;
+    }
+
+    .add-mission-mobile > p {
+        text-align: center;
+    }
+    
+    #newMissionInput {
+        width: 100%;
+    }
 }
