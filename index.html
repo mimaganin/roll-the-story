@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Roll the dice and create a story</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Roll the story - Create a hero journey</title>
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- CSS File -->
@@ -12,9 +12,11 @@
 
 <body>
     <main>
+        <h2>Roll the dice to (re)create a hero journey</h2>
+        <a href="#how-to-play" class="how-to-play-btn mobile">How to play</a>
         <div class="characters-container">
             <div class="dice-container">
-                <div class="dice">
+                <div class="dice dice-character one">
                     <div class="face front character one"></div>
                     <div class="face back character one"></div>
                     <div class="face top character one"></div>
@@ -22,18 +24,16 @@
                     <div class="face right character one"></div>
                     <div class="face left character one"></div>
                 </div>
-        
-                <button class="roll third-dice">
-                    Roll a Hero
+                <button class="roll">
+                    Roll the Hero
                 </button>
                 <button class="refresh-button one">
                     Refresh
                 </button>
-                <div class="character-two-name"></div>
             </div>
     
             <div class="dice-container">
-                <div class="dice">
+                <div class="dice dice-character two">
                     <div class="face front character two"></div>
                     <div class="face back character two"></div>
                     <div class="face top character two"></div>
@@ -41,21 +41,32 @@
                     <div class="face right character two"></div>
                     <div class="face left character two"></div>
                 </div>
-        
-                <button class="roll third-dice">
-                    Roll the partner
+                <button class="roll">
+                    Roll the enemy
                 </button>
                 <button class="refresh-button two">
                     Refresh
                 </button>
-                <div class="character-two-name"></div>
+            </div>
+
+            <div id="game-instructions" class="game-instructions-container desktop">
+                <div class="game-instructions">
+                    <div class="how-to-play">
+                        <h3>How to play</h3>
+                    </div>
+                    <p><span>Objective:</span> Click the buttons to roll the dice and create a narrative with all the drawn elements.</p>
+                    <p><span>Hero:</span> the protagonist who will lead the story.</p>
+                    <p><span>Enemy:</span> the antagonist who will threaten, detain, or fight your hero on the mission.</p>
+                    <p><span>Mission:</span> what does your hero have to accomplish today?</p>
+                    <p><span>Movie:</span> the universe where it will all happen (consider the actual film script - it may become a little weird, but that's where the fun is).</p>
+                    <p><span>Refresh:</span> didn't like the options you got? No worries, click "refresh" and we'll get you more.</p>
+                </div>
             </div>
         </div>
         
-        
         <div class="action-container">
             <div class="dice-container">
-                <div class="dice">
+                <div class="dice dice-movie">
                     <div class="face front movie"></div>
                     <div class="face back movie"></div>
                     <div class="face top movie"></div>
@@ -63,9 +74,8 @@
                     <div class="face right movie"></div>
                     <div class="face left movie"></div>
                 </div>
-
-                <button class="roll second-dice">
-                    Roll a Movie
+                <button class="roll">
+                    Roll the Movie
                 </button>
                 <button class="refresh-button movie-refresh">
                     Refresh
@@ -73,7 +83,7 @@
             </div>
 
             <div class="dice-container">
-                <div class="dice">
+                <div class="dice dice-mission">
                     <div class="face front mission"></div>
                     <div class="face back mission"></div>
                     <div class="face top mission"></div>
@@ -81,23 +91,42 @@
                     <div class="face right mission"></div>
                     <div class="face left mission"></div>
                 </div>
-        
-                <button class="roll">
-                   Get a Mission
+                <button class="roll roll-mission">
+                   Roll a Mission
                 </button>
                 <button class="refresh-button mission-refresh">
                     Refresh
                 </button>
             </div>
+
+            <div id="game-instructions" class="game-instructions-container add-mission">
+                <div class="game-instructions add-mission-mobile">
+                    <p>Feeling creative? Put your own mission in the list:</p>
+                    <div class="mission-input">
+                        <textarea rows="2" id="newMissionInput" maxlength="70" placeholder="Type a new mission here"></textarea>
+                        <button id="addMissionButtonDesktop">Add Mission</button>
+                        <p id="errorMessage"></p>
+                    </div>
+                    <p id="successMessage"></p>
+                </div>
+            </div>                                    
         </div>
-          
+        <div id="game-instructions" class="game-instructions-container mobile">
+            <div class="game-instructions">
+                <div id="how-to-play" class="how-to-play">
+                    <h3>How to play</h3>
+                </div>
+                  <p><span>Objective:</span> Click the buttons to roll the dice and create a narrative with all the drawn elements.</p>
+                  <p><span>Hero:</span> the protagonist who will lead the story.</p>
+                  <p><span>Enemy:</span> the antagonist who will threaten, detain, or fight your hero on the mission.</p>
+                  <p><span>Mission:</span> what does your hero have to accomplish today?</p>
+                  <p><span>Movie:</span> the universe where it will all happen (consider the actual film script - it may become a little weird, but that's where the fun is).</p>
+                  <p><span>Refresh:</span> didn't like the options you got? No worries, click "refresh" and we'll get you more.</p>
+            </div>
+        </div>
     </main>
-
+    <footer>Created by Milena Maganin :: [  github/mimaganin  ]</footer>
     <!-- JS File -->
-    <script src="js/roll-dice.js" type="module"></script>
-    <!-- <script src="missions.js" type="module"></script> -->
-    <!-- <script src="js/api.js" type="text/javascript"></script> -->
-
+    <script src="js/script.js" type="module"></script>
 </body>
-
 </html>

@@ -92,22 +92,5 @@ export const missions = [
     "Challenge each other to a superhero-themed puzzle-solving contest.",
     "Have a superhero-themed photo booth session.",
     "Go on a mission to capture a mischievous superpowered pet.",
-    "Participate in a superhero-themed talent show.",
-    "Challenge each other to a superhero-themed arm wrestling match.",
-    "Organize a superhero-themed magic show for kids.",
-    "Play a superhero-themed board game tournament.",
-    "Go on a superhero-themed photo shoot in iconic locations.",
-    "Try to outdo each other in a superhero-themed talent show.",
-    "Compete in a superhero-themed mini-golf tournament.",
-    "Have a superhero-themed picnic in the park.",
-    "Go on a mission to rescue a stolen superhero cape.",
-    "Challenge each other to a superhero-themed video game tournament.",
-    "Try to teach each other a new superhero skill.",
-    "Participate in a superhero-themed dance marathon.",
-    "Organize a superhero-themed beach party.",
-    "Go on a mission to find the best superhero-themed ice cream shop.",
-    "Challenge each other to a superhero-themed puzzle-solving contest.",
-    "Have a superhero-themed photo booth session.",
-    "Go on a mission to capture a mischievous superpowered pet.",
     "Participate in a superhero-themed talent show."
-]
+];
