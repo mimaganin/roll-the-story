@@ -9,3 +9,5 @@ How to play
 4. Mission: what does your hero have to accomplish today?
 5. Movie: the universe where it will all happen (consider the actual film script - it may become a little weird, but that's where the fun is).
 6. Refresh: didn't like the options you got? No worries, click "refresh" and we'll get you more.
+
+Feeling creative? Type your mission and it will be added to the die. Keep rolling!
