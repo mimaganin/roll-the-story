@@ -12,3 +12,11 @@ Objective: Click the buttons to roll the dice and create a narrative with all th
 5. Refresh: didn't like the options you got? No worries, click "refresh" and we'll get you more.
 
 Feeling creative? Type your mission and it will be added to the die. Keep rolling!
+
+---------
+
+The game uses the following APIs to get data:
+
+SuperheroAPI
+
+The Movie Database
