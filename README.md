@@ -3,7 +3,7 @@ Roll the story - Create a hero journey
 
 How to play
                     
-1. Click the buttons to roll the dice and create a narrative with all the drawn elements
+Objective: Click the buttons to roll the dice and create a narrative with all the drawn elements
 2. Hero: the protagonist who will lead the story.
 3. Enemy: the antagonist who will threaten, detain, or fight your hero on the mission.
 4. Mission: what does your hero have to accomplish today?
